@@ -25,8 +25,8 @@ def hamming(h1, h2):
 def similarity(dist):
     return (64 - dist) * 100 / 64
 
-# detect deduplication and return a list of deduped imglist
 def dedup_imglist(prefix_folder, imglist, threshold = 97):
+    # detect deduplication and return a list of deduped imglist
     num_img = len(imglist)
     assert(num_img>2)
     imglist = [prefix_folder + '/' + l for l in imglist]
